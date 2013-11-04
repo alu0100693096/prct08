@@ -1,4 +1,5 @@
 $:.unshift File.dirname(__FILE__)
+S:.unshift './lib'
 
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new

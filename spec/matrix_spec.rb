@@ -1,1 +1,1 @@
-require 'lib/matrix.rb'
+require 'matrix.rb'
