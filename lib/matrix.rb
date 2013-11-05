@@ -56,6 +56,24 @@ class Matrix
 		end
 	end
 
+	def +(other)
+		if((@rows == other.rows) && (@columns == other.columns))
+			sum = Matrix.new(@rows, @columns)
+			i = 0
+			while i < @rows do
+				j = 0
+				while j < @columns do
+					sum[i][j] = @container[i][j] + other[i][j]
+				j = j+1
+				end
+			i = i+1
+			end
+			sum
+		else
+		puts "Las matrices no se pueden sumar, no son del mismo tamanio"
+		end
+	end
+
 private
 	# Se asegura que los valores pasados están dentro del rango [0, Infinito)
 	# y que son números enteros. En caso contrario lanza una excepción.
